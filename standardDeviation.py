@@ -1,7 +1,9 @@
 import math
+#declaring a list of numbers
 numbers=[]
 n=int(raw_input("enter number of inputs:\n>"))
 
+#class for calculating mean/average, variance and standard deviation
 class StandardDeviation():
 
     def average(self,numbers,n):
@@ -33,6 +35,3 @@ std=StandardDeviation()
 print ('Mean: {}').format(std.average(numbers, n))
 print ('Variance: {}').format(std.variance(numbers, n))
 print ('Standard Deviation: {}').format(std.stanDev(numbers, n))
-
-
-
