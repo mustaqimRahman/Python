@@ -1,4 +1,7 @@
 # Python
-This repository contains some common python example codes.
+This repository contains python example codes.
+Mostly commonly used algorithms and their solution.
 
-Feel free to download the .py files and execute in your machine.
+The WebApp folder contains some webapplication projects that I have worked on.
+Simply download the project of your choice and follow the readme file instructions to run the project. 
+
