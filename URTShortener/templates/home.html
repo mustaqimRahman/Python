@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>URL Shortener</title>
+</head>
+
+<body style="background-color: beige">
+    <form action="{{url_for('home')}}" method = "POST">
+    <h2>Type your url to be shortend: <h2>
+    {{form.url}}
+    <br><br>
+    {{form.submit}}
+    <br>
+    </form>
+    <h2> Your short URL is: </h2>
+    {% if key:%}
+        <h2><a href={{key}}>127.0.0.1:5000/{{key}}</a></h2>
+    {% endif%}
+</body>
+
+</html>
