@@ -1,10 +1,6 @@
-from email import message
-from re import U
 from flask import Flask, redirect
 from flask import render_template
 from forms import UrlShortener
-import random
-
 from cryptography.fernet import Fernet
 
 urls = [{'zWMqKI' : 'www.xyz.com'}]
@@ -35,6 +31,7 @@ def home():
 def url_redirect(short_url):
     # original_url = urls[short_url]
     short_url= str(short_url)
+    original_url = '/'
     for each in urls:
         if short_url in each.keys():
             original_url = each[short_url]
