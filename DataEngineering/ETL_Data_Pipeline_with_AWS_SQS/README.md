@@ -1,9 +1,6 @@
 <h1>
   Develop data pipeline to transform "Sample NLP web crawler extraction Dataset" and store it in a database
 </h1>
-<h2>
-  (CGI Take home Assignment)</h1>
-</h2>
 
 <p><b>Project Description:</b></p> 
 <p>A sample dataset is provided in the repository. Filename is "Sample NLP web crawler extraction Dataset.xlsx". Convert the .xlsx file to a CSV file. Then write a process to add dummy data to the CSV file. Read 10 reacords from the CSV file in every 5 seocnds interval. Add the data to data streaming service (AWS SQS). A Lambda functions reads the data from SQS, makes necessary transformation to the data and loads it to a database in DynamoDB. The detail task description is available in the file "DE_take_home_assignment.docx". 
