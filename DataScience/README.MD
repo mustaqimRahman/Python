@@ -13,9 +13,9 @@ Remember to thoroughly review and modify the code to meet your specific requirem
 
 **Functionality**
 
-The executable gets Polaris defects from a project of an app for a given severity level. Then creates issues on Azure Boards for the given project name based on the defects exported from Polaris.   
-It supports business scenarios as follows
-**Create** issues in Azure Boards from the latest scan results of any project in Polaris based on the severity of the vulnerability   
+The executable gets Polaris defects from a project of an app for a given severity level. Then creates issues on a Azure Boards project.   
+It supports business the scenario as follows: 
+    - Create issues in Azure Boards from the latest scan results of any project in Polaris based on the severity of the identified vulnerabilities   
 
 To run the executable, you may follow the steps below for reference.
 1. Requirement to run the executable are as follows:
