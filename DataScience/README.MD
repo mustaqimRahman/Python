@@ -18,37 +18,34 @@ It supports business scenarios as follows
 **Create** issues in Azure Boards from the latest scan results of any project in Polaris based on the severity of the vulnerability   
 
 To run the executable, you may follow the steps below for reference.
-1. Navigate to the directory where the executable and config files are stored.
-2. Open the config.py file and populate the follwoing variables with appropriate values
+1. Requirement to run the executable are as follows:
+    - Python 3.9.6
+    - Required modules [http.client, json, sys]
+2. Navigate to the directory where the executable and config files are stored.
+3. Open the config.py file and populate the follwoing variables with appropriate values
     - polaris_url
     - polaris_access_token
     - azure_url
     - azure_organization_name
     - azure_access_token
-3. Run the python executable with the following parameters
+4. The python executable requires the following 4 mandatory parameters:
     - polaris app name
     - polaris project name
     - severity level of the issues to be exported into Azure Boards. accepted values are [low, medium, high, critical]
     - Azure DevOps Project name
-4. Run the executable from a terminal. example execution commad:
-    - python3 polaris-export-defects-to-azure-boards.py <polaris-app name> <polaris-project name> <severity> <ADOS-Project name>
+5. Run the executable from a terminal. example execution commad:
+    - python3 polaris-export-defects-to-azure-boards.py [polaris-app name] [polaris-project name] [severity] [ADOS-Project name]
 
-Test Plan:  
+**Test Plan:**  
 
-**(1)** Scan a project with previously unknown defects. Follow the steps above, you should see Jira TODO tickets for 
+Scan a project with defects in Polaris. Follow the steps above, you should see Azure Boards issues for 
 those new defects.  
-**(2)** Mark some defects with False Positive / Intentional, then the cov-export-defects-to-jira will automatically 
-delete the tickets of those defects in Jira.  
-**(3)** Fix some defects. Follow the step above, you should be the status for the tickets of those defects are modified
-to "Done" status.  
-**(4)** Modify the "--impact" parameter with any combination of high, medium, low, and audit. You should see the defects
-exported to Jira are controlled. The customer may focus the defects with high and medium impacts first and the low 
-and audit subsequently.
 
-Troubleshooting:  
+
+**Troubleshooting:**  
 N.A.  
 
-Updates:
+**Updates:**
 
-22nd June 2021: Exporting defects to Jira Cloud is enabled.
-30th Sept 2021: Add test plan.
+12 June 2023: Exporting defects from Polaris to Azure Boards is enabled.
+
